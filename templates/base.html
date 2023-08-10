@@ -4,11 +4,48 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>{% block title %}FlaskApp{% endblock %}</title>
+    <title>{% block title %}შსს სამინისტრო{% endblock %}</title>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
         crossorigin="anonymous"></script>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style/main.css') }}">
+    <!-- FB Meta tags (start) -->
+    <meta property="og:title" content="მთავარი გვერდი" />
+    <meta property="og:url" content="//police.ge/ge/home" />
+    <meta property="og:image" content="//police.ge/files/image headers/head_banner.jpg" />
+
+    <!-- <meta property="og:image" content="//police.ge/_website/images/mia-logo-fb-share.png"/> -->
+    <!--<meta property="og:image" content="//police.ge/http://police.ge/files/image headers/head_banner.jpg"/>-->
+    <meta property="og:description" content="" />
+    <meta property="og:site_name" content="საქართველოს შინაგან საქმეთა სამინისტრო" />
+    <meta property="fb:admins" content="" />
+    <meta property="og:email" content="sazogadoeba@mia.gov.ge" />
+    <!-- FB Meta tags (end)-->
+    <meta name="description" content="საქართველოს შინაგან საქმეთა სამინისტრო," />
+    <meta name="keywords" content="შინაგან, საქმეთა, სამინისტრო, პოლიცია, თბილისი, საქართველო," />
+    <meta name="google-site-verification" content="" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="Robots" content="index, follow" />
+    <meta name="author" content="" />
+    <link rel="shortcut icon" type="image/x-icon" href="../static/images/favicon.ico">
 </head>
+
+<header class="header">
+    <nav>
+        <div class="logo">
+            <a href=""><img class="main_logo" src="../static/images/შსს ლოგო.svg" alt="ლოგო"> შსს სამინისტრო</a>
+        </div>
+        <input type="checkbox" id="menu-toggle">
+        <label for="menu-toggle" class="menu-icon">&#9776;</label>
+        <ul class="menu">
+            <li><a href="{{ url_for('home') }}">მთავარი</a></li>
+            <li><a href="{{ url_for('about') }}">ჩვენ შესახებ</a></li>
+            <li><a href="#">დანაშაულები</a></li>
+            <li><a href="#">შესვლა</a></li>
+            <li><a href="#">რეგისტრაცია</a></li>
+        </ul>
+    </nav>
+</header>
 
 <body>
     {% block content %}
