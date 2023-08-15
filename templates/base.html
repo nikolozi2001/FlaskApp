@@ -4,11 +4,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>{% block title %}შსს სამინისტრო{% endblock %}</title>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
-        crossorigin="anonymous"></script>
+    <title>{% block title %}შინაგან საქმეთა სამინისტრო{% endblock %}</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style/reset.css') }}">
     <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style/main.css') }}">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style/fonts.css') }}">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style/responsive.css') }}">
     <!-- FB Meta tags (start) -->
     <meta property="og:title" content="მთავარი გვერდი" />
     <meta property="og:url" content="//police.ge/ge/home" />
@@ -33,14 +33,15 @@
 <header class="header">
     <nav>
         <div class="logo">
-            <a href=""><img class="main_logo" src="../static/images/შსს ლოგო.svg" alt="ლოგო"> შსს სამინისტრო</a>
+            <a href="/"><img class="main_logo" src="../static/images/შსს ლოგო.svg" alt="ლოგო"> შინაგან საქმეთა
+                სამინისტრო</a>
         </div>
         <input type="checkbox" id="menu-toggle">
         <label for="menu-toggle" class="menu-icon">&#9776;</label>
         <ul class="menu">
             <li><a href="{{ url_for('home') }}">მთავარი</a></li>
             <li><a href="{{ url_for('about') }}">ჩვენ შესახებ</a></li>
-            <li><a href="#">დანაშაულები</a></li>
+            <li><a href="{{ url_for('criminals') }}">დამნაშავეები</a></li>
             <li><a href="#">შესვლა</a></li>
             <li><a href="#">რეგისტრაცია</a></li>
         </ul>
@@ -55,6 +56,9 @@
     {% block footer %}
     <!-- footer -->
     {% endblock %}
+
+
+    <script src="{{ url_for('static', filename='js/script.js') }}"></script>
 </body>
 
 </html>

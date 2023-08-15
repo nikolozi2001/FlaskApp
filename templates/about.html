@@ -1,7 +1,35 @@
 {% extends "base.html" %}
 
-{% block title %} ჩვენ შესახებ {% endblock %}
+{% block title %}შსს - ჩვენ შესახებ {% endblock %}
 
 {% block content %}
-<h1>Hello from about page</h1>
+
+<div class="responsive-container-block bigContainer">
+    <div class="responsive-container-block Container bottomContainer">
+        <div class="allText bottomText">
+            <p class="text-blk headingText">
+                ჩვენ შესახებ
+            </p>
+            <p class="text-blk subHeadingText">
+                საქართველოს შინაგან საქმეთა სამინისტრო
+            </p>
+            <p class="text-blk description">
+                საქართველოს შინაგან საქმეთა სამინისტრო — საქართველოს სამინისტრო, რომლის ხელმძღვანელი მთავრობის წევრია. სამინისტრო ანგარიშვალდებულია მთავრობის წინაშე და ასრულებს მისსავე ან პრემიერ-მინისტრის მიერ დაკისრებულ ამოცანებს. 2019 წლის სექტემბრიდან შინაგან საქმეთა მინისტრია ვახტანგ გომელაური.
+            </p>
+            <a>
+                <button class="explore">
+                    მეტის ნახვა
+                </button>
+            </a>
+        </div>
+        <div class="videoContainer">
+            <iframe allowfullscreen="allowfullscreen" class="mainVideo" controls="controls" frameborder="0"
+                src="https://www.youtube.com/embed/h4qMaf5p3Jw">
+            </iframe>
+            <img class="dotsImg image-block"
+                src="https://workik-widget-assets.s3.amazonaws.com/widget-assets/images/cw3.svg">
+        </div>
+    </div>
+</div>
+
 {% endblock %}
