@@ -1,3 +1,7 @@
+:root {
+    --shss: #055a67;
+  }
+
 * {
     padding: 0;
     margin: 0;
@@ -868,4 +872,64 @@ img {
     font-size: 13px;
     margin-top: 35px;
     text-align: center;
+}
+/* login page */
+
+/* static/styles.css */
+.container {
+    /* width: 300px; */
+    padding: 20px;
+    background-color: rgba(255, 255, 255, 0.8);
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center; 
+}
+
+h2 {
+    margin-bottom: 20px;
+    color: #333;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+label {
+    margin-bottom: 5px;
+    font-weight: bold;
+    color: #555;
+}
+
+input {
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    width: 100%;
+}
+
+input[type="submit"] {
+    background-color: var(--shss);
+    color: #fff;
+    cursor: pointer;
+    border: none;
+    border-radius: 3px;
+    padding: 10px 0;
+    width: 100%;
+}
+
+a {
+    text-decoration: none;
+    color: var(--shss);
+    font-weight: bold;
+}
+
+.error {
+    color: red;
+    margin-top: 5px;
 }
