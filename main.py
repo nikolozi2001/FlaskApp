@@ -5,7 +5,7 @@ app = Flask(__name__)
 
 users = {
     'user1': 'password1',
-    'user2': 'password2'
+    'nikakachibaia': 'general126'
 }
 
 @app.route("/")
