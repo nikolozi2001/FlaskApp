@@ -26,9 +26,9 @@ def login():
         username = request.form['username']
         password = request.form['password']
         if username in users and users[username] == password:
-            return f'Logged in as {username}'
+            return f'თქვენ სისტემაში შესული ხართ როგორც {username}'
         else:
-            return 'Invalid username or password'
+            return 'მომხმარებლის სახელი ან პაროლი არასწორია'
     return render_template("login.html", navigation_items=navigation_items)
 
 
@@ -40,12 +40,12 @@ def register():
         password = request.form['password']
         confirm_password = request.form['confirm_password']
         if username in users:
-            return 'Username already exists'
+            return 'ასეთი მომხმარებლის სახელი უკვე არსებობს'
         elif password != confirm_password:
-            return 'Passwords do not match'
+            return 'პაროლები არ ემთხვევა'
         else:
             users[username] = password
-            return f'Registered new user: {username}'
+            return f'დარეგისტრირებულია ახალი მომხმარებელი: {username}'
     return render_template("register.html", navigation_items=navigation_items)
 
 
