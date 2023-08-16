@@ -39,11 +39,9 @@
         <input type="checkbox" id="menu-toggle">
         <label for="menu-toggle" class="menu-icon">&#9776;</label>
         <ul class="menu">
-            <li><a href="{{ url_for('home') }}">მთავარი</a></li>
-            <li><a href="{{ url_for('about') }}">ჩვენ შესახებ</a></li>
-            <li><a href="{{ url_for('criminals') }}">დამნაშავეები</a></li>
-            <li><a href="#">შესვლა</a></li>
-            <li><a href="#">რეგისტრაცია</a></li>
+            {% for item in navigation_items %}
+                <li><a href="{{ item.url }}">{{ item.label }}</a></li>
+            {% endfor %}
         </ul>
     </nav>
 </header>
