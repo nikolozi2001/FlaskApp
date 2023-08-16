@@ -1,5 +1,5 @@
 from flask import Flask, render_template, request, redirect, url_for
-from config import navigation_items
+from config import navigation_items, criminals_data
 
 app = Flask(__name__)
 
@@ -16,9 +16,9 @@ def home():
 def about():
     return render_template("about.html", navigation_items=navigation_items)
 
-@app.route("/criminals")
+@app.route('/criminals')
 def criminals():
-    return render_template("criminals.html", navigation_items=navigation_items)
+    return render_template("criminals.html", criminals=criminals_data, navigation_items=navigation_items)
 
 @app.route('/login', methods=['GET', 'POST'])
 def login():
