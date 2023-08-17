@@ -312,6 +312,7 @@ nav {
 }
 
 .videoContainer {
+    z-index: -1;
     width: 46%;
     height: 600px;
     display: flex;
