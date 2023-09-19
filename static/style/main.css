@@ -1002,17 +1002,42 @@ a {
     color: #555;
 }
 
-.mb-2{
+.mb-2 {
     font-family: Poppins, sans-serif;
     color: #4d4d4d;
-    font-size: 18px;
+    font-size: 17px;
     line-height: 28.8px;
 }
 
-.fas, .fa-check {
+.fas,
+.fa-check {
     font-family: "Font Awesome 5 Free";
     font-size: 14px;
     line-height: 14px;
     color: #49a078;
     margin-right: 5px;
+}
+
+/* Define a grid container with 3 columns */
+#benefit {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr)); /* Equivalent to grid-cols-3 */
+    gap: 1rem; /* Adjust the gap as needed */
+    grid-auto-flow: dense; /* Equivalent to grid-flow-row-dense */
+}
+
+/* Responsive styles */
+
+/* For screens 640px or narrower, switch to 2 columns */
+@media (max-width: 640px) {
+    #benefit {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+}
+
+/* For screens 480px or narrower, switch to 1 column */
+@media (max-width: 480px) {
+    #benefit {
+        grid-template-columns: minmax(0, 1fr);
+    }
 }
